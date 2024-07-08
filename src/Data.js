@@ -2,7 +2,11 @@ export const Data =[
     {
     IDE:1 ,
     que:"In which country are the world’s 10 coldest cities located?",
-    ans:"Russia"},
+    ans:"Russia",
+    option1: "Canada",
+    option2: "Columbia",
+    option3: "Poland"
+},
     {
     IDE:2,
     que:"Supposedly home to a “monster,” Loch Ness is one of many inland seas—or “lochs”—in which country?",

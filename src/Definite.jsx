@@ -7,17 +7,7 @@ export default function Definite(){
    
     // const [answer, setAnswer]=useState([]);
     const [index, Setindex]=useState(0)
-  const [Question,setQuestion]=useState(Data[index]); 
-console.log(Question);
-// useEffect(()=>{ fetch('https://restcountries.com/v3.1/all')
-//   .then(response => response.json())
-//   .then(data => {
-//     setAnswer(data);
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.log(error)
-//   })},[])   
+  const [Question,setQuestion]=useState(Data[index]);  
 
     return (
       <div id="cont">
@@ -30,6 +20,12 @@ console.log(Question);
         </div>
        <div>
         <h3>{Question.que}</h3>
+        <ul>
+          <li>{Question.ans}</li>
+          <li>{Question.option1}</li>
+          <li>{Question.option2}</li>
+          <li>{Question.option3}</li>
+        </ul>
        </div>
  
           {/* <div>
