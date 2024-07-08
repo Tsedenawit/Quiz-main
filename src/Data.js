@@ -39,8 +39,4 @@ export const Data =[
     IDE:10 ,
     que:"What country has the longest coastline?",
     ans:"Canada"},
-
-    {IDE:7, que:"Home to languages like Tok Pisin, Hiri Motu, and a German creole known as Unserdeutsch, which is the most linguistically diverse country in the world? - Papua New Guinea"},
-    {IDE:8, que:"Which of these is NOT one of the 13 countries crossed by the Equator? - egypt"},
-    {IDE:9, que:"Thanks to the tombs built by the ancient kingdom of Kush, which country is home to—by far—the most pyramidEs in the world?-sudan"},
-    {IDE:10, que:" What country has the longest coastline? - canada"}];
+]

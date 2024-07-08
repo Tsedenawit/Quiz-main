@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from "react";
-import { motion } from "framer-motion";
+import { Data } from "./Data";
 export default function Definite(){
     const numbers = [{id:1, num:1},
       {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
