@@ -3,8 +3,20 @@ export const Data =[
     IDE:1 ,
     que:"In which country are the world’s 10 coldest cities located? - russia",
     ans:"Russia"},
-    {IDE:2, que:"Supposedly home to a “monster,” Loch Ness is one of many inland seas—or “lochs”—in which country?- scotland"},
-    {IDE:3, que:"Which country has three capital cities—Pretoria, Cape Town, and Bloemfontein? - southafrica"},
+    {
+    IDE:2,
+    que:"Supposedly home to a “monster,” Loch Ness is one of many inland seas—or “lochs”—in which country?- scotland",
+    ans:"Scotland" },
+    {
+    IDE:3,
+    que:"Which country has three capital cities—Pretoria, Cape Town, and Bloemfontein?",
+    ans:"South africa"},
+    {
+    IDE:4 ,
+    que:"In which country are the world’s 10 coldest cities located? - russia",
+    ans:"Russia"},
+
+
     {IDE:4, que:"Thanks to its overseas territories, which country technically spans 12 time zones? -france"},
     {IDE:5, que:"With an area of less than 0.2 square mile (0.5 square kilometer), which is the smallest country in the world? - vatican city"},
     {IDE:6, que:"Which continent is home to the most countries? -africa"},
