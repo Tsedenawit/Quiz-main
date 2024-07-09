@@ -36,15 +36,6 @@ export default function Definite(){
         </ul>
        </div>
  
-          {/* <div>
-  {answer.map((ans) => (
-    <div key={ans.tld} className="bg-current w-200 h-100">
-     <h3 className="text-white">{ans.name.common}</h3>
-
-    </div>
-    
-  ))}
-</div> */}
           
       </div>
     )
