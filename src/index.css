@@ -47,3 +47,6 @@ li{
   box-shadow: 1px 1px 1px 0px black ;
   margin-top: 10px;
 }
+li:hover{
+  background-color: #393F6E;
+}

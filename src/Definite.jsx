@@ -25,13 +25,13 @@ export default function Definite(){
         <br></br>
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li>{Question.option4}</li>
           <li>{Question.option1}</li>
+          <li>{Question.option2}</li>
           </div>
           <br></br>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li>{Question.option2}</li>
           <li>{Question.option3}</li>
+          <li>{Question.option4}</li>
           </div>
         </ul>
        </div>
