@@ -2,10 +2,11 @@ export const Data =[
     {
     IDE:1 ,
     que:"In which country are the world’s 10 coldest cities located?",
-    ans:"Russia",
+    ans:4,
     option1: "Canada",
     option2: "Columbia",
-    option3: "Poland"
+    option3: "Poland",
+    option4:"Russia",
 },
     {
     IDE:2,

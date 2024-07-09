@@ -18,11 +18,14 @@ export default function Definite(){
           </div>
         ))}
         </div>
+        <br></br>
+        <br></br>
        <div>
-        <h3>{Question.que}</h3>
+        <h3 className="text-white text-center text-xl">{Question.que}</h3>
+        <br></br>
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li>{Question.ans}</li>
+          <li>{Question.option4}</li>
           <li>{Question.option1}</li>
           </div>
           <br></br>
