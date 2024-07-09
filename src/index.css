@@ -39,7 +39,10 @@ code {
 }
 li{
   width: 200px;
-  height: 100px;
-  background-color: orchid;
+  height: 50px;
+  background-color: #343964;
   text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0px black ;
 }

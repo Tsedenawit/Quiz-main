@@ -25,7 +25,8 @@ export default function Definite(){
           <li>{Question.ans}</li>
           <li>{Question.option1}</li>
           </div>
-          <div className="flex">
+          <br></br>
+          <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
           <li>{Question.option2}</li>
           <li>{Question.option3}</li>
           </div>
