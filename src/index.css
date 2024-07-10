@@ -4,6 +4,7 @@
 
 body {
   background-color:#343964 ;
+  background-image: url(../public/Images/bg.jpg);
 }
 #cont{
   background-color:#393F6E ;
@@ -48,5 +49,5 @@ li{
   margin-top: 10px;
 }
 li:hover{
-  background-color: #393F6E;
+  background-color: linear-gradient(#E65895, #BC6BE8);
 }
