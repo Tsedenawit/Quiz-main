@@ -34,8 +34,9 @@ export default function Definite(){
           <li>{Question.option4}</li>
           </div>
         </ul>
+        <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 ">Next</button>
        </div>
- 
+        
           
       </div>
     )
