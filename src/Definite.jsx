@@ -9,6 +9,11 @@ export default function Definite(){
     const [index, Setindex]=useState(0)
   const [Question,setQuestion]=useState(Data[index]);  
 
+   let adding=()=>{
+    return Setindex(index+1),
+    setQuestion(Data[index+1])
+   }
+   console.log(index, Question)
     return (
       <div id="cont">
         <div  className="flex ml-20 mr-20 mt-10">
@@ -26,7 +31,7 @@ export default function Definite(){
         <h3 className="text-white text-center text-xl">{datas.que}</h3>
         {console.log(datas.que)}
         </div>)} */}
-        {index + 1}<h3 className="text-white text-center text-xl">{Question.que}</h3>
+        <h3 className="text-white text-center text-xl">{index + 1}.{Question.que}</h3>
         <br></br>
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
@@ -39,7 +44,7 @@ export default function Definite(){
           <li>{Question.option4}</li>
           </div>
         </ul>
-        <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded">Next</button>
+        <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded" onClick={adding}>Next</button>
        </div>
         
           
