@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import { Data } from "./Data";
-import {useNavigate} from "react-router-dom";
+import Congra from "./Congra";
+import {useHref, useNavigate} from "react-router-dom";
 export default function Definite(){
     const numbers = [{id:1, num:1},
       {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
@@ -9,19 +10,18 @@ export default function Definite(){
     // const [answer, setAnswer]=useState([]);
     const [index, Setindex]=useState(0)
    const [Question,setQuestion]=useState(Data[index]);  
-   const history = useNavigate();
+   const navigate = useNavigate();
 
 
    let adding=()=>{
     if (index > 9) {
        return Setindex(index+1),
     setQuestion(Data[index+1])
-    }else{
-      history.push("/Congra");
+    }else if (index === 9) {
+      navigate('./Congra')
     }
-   
    }
-
+ console.log(index);
   //  let redirect =()=>{
   //   return 
   //  }
@@ -51,7 +51,7 @@ export default function Definite(){
           <li>{Question.option4}</li>
           </div>
         </ul>
-       <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded" onClick={() => index > 9 ? adding() : adding()}>Next</button> 
+       <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded" onClick={adding}>Next</button> 
        </div>
         
           
