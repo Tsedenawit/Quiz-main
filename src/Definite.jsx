@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import { Data } from "./Data";
+
 export default function Definite(){
     const numbers = [{id:1, num:1},
       {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
@@ -10,9 +11,18 @@ export default function Definite(){
   const [Question,setQuestion]=useState(Data[index]);  
 
    let adding=()=>{
-    return Setindex(index+1),
+    if (index > 9) {
+       return Setindex(index+1),
     setQuestion(Data[index+1])
+    }else if (condition) {
+      
+    }
+   
    }
+
+  //  let redirect =()=>{
+  //   return 
+  //  }
    console.log(index, Question)
     return (
       <div id="cont">
