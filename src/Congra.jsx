@@ -8,7 +8,7 @@ export default function Congra(){
            <br></br>
            <br></br>
            <h3 className="text-white text-xl text-center">You answer 4/10 correctly.</h3>
-           <div id="play"><button>Play again</button></div>
+           <button id="play">Play again</button>
         </div>
     )
 }
