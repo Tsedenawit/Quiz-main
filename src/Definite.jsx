@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { Data } from "./Data";
-
+import {useNavigate} from "react-router-dom";
 export default function Definite(){
     const numbers = [{id:1, num:1},
       {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
@@ -8,14 +8,16 @@ export default function Definite(){
    
     // const [answer, setAnswer]=useState([]);
     const [index, Setindex]=useState(0)
-  const [Question,setQuestion]=useState(Data[index]);  
+   const [Question,setQuestion]=useState(Data[index]);  
+   const history = useNavigate();
+
 
    let adding=()=>{
     if (index > 9) {
        return Setindex(index+1),
     setQuestion(Data[index+1])
-    }else if (condition) {
-      
+    }else{
+      history.push("/Congra");
     }
    
    }
