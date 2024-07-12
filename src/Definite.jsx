@@ -14,12 +14,9 @@ export default function Definite(){
 
 
    let adding=()=>{
-    if (index > 9) {
-       return Setindex(index+1),
+             Setindex(index+1)
     setQuestion(Data[index+1])
-    }else if (index === 9) {
-      navigate('./Congra')
-    }
+     
    }
  console.log(index);
   //  let redirect =()=>{
