@@ -18,6 +18,13 @@ export default function Definite(){
     setQuestion(Data[index+1])
      
    }
+   const check = (e,answer)=>{
+    if (Question.ans=== answer) {
+      e.target.classList.add("correct");
+    } else {
+      e.target.classList.add("wrong");
+    }
+   }
  console.log(index);
   //  let redirect =()=>{
   //   return 
@@ -39,13 +46,13 @@ export default function Definite(){
         <br></br>
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li>{Question.option1}</li>
-          <li>{Question.option2}</li>
+          <li onClick={(e)=>{check(e,1)}}>{Question.option1}</li>
+          <li onClick={(e)=>{check(e,1)}}>{Question.option2}</li>
           </div>
           <br></br>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li>{Question.option3}</li>
-          <li>{Question.option4}</li>
+          <li onClick={(e)=>{check(e,1)}}>{Question.option3}</li>
+          <li onClick={(e)=>{check(e,1)}}>{Question.option4}</li>
           </div>
         </ul>
        <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded" onClick={adding}>Next</button> 
