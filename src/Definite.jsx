@@ -11,12 +11,14 @@ export default function Definite(){
     const [index, Setindex]=useState(0)
    const [Question,setQuestion]=useState(Data[index]); 
     const [lock, setLock]= useState(false);
-  //  const navigate = useNavigate();
+   const navigate = useNavigate();
 
 
-   let adding=()=>{
-             Setindex(index+1)
+   let adding=()=>{if (index < 9) {
+    Setindex(index+1)
     setQuestion(Data[index+1])
+   }
+             
      
    }
    const check = (e,answer)=>{
