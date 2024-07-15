@@ -17,8 +17,13 @@ export default function Definite(){
    let adding=()=>{if (index < 9) {
     Setindex(index+1)
     setQuestion(Data[index+1])
+   }else {
+    navigate("/Congra");
    }
-             
+    let play =()=>{
+      Setindex(0)
+      setQuestion(Data[index]);
+    }         
      
    }
    const check = (e,answer)=>{
