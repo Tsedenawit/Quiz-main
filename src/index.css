@@ -77,10 +77,15 @@ li{
   margin-top: 10px;
 }
 li:hover{
-  background-color: linear-gradient(#E65895, #BC6BE8);
+  background-color: rgb(125, 109, 174);
 }
 .correct{
-  background-color: green;
+  background-image: url(../public/Images/Check_round.png);
+  background-size: 20px; 
+  background-position: right; 
+  width: 200px; 
+  height:50px;
+  background-repeat: no-repeat;
 }
 .wrong{
   background-color: red;
