@@ -9,7 +9,8 @@ export default function Definite(){
    
     // const [answer, setAnswer]=useState([]);
     const [index, Setindex]=useState(0)
-   const [Question,setQuestion]=useState(Data[index]);  
+   const [Question,setQuestion]=useState(Data[index]); 
+    const [lock, setLock]= useState(false);
   //  const navigate = useNavigate();
 
 
@@ -19,12 +20,16 @@ export default function Definite(){
      
    }
    const check = (e,answer)=>{
-    if (Question.ans=== answer) {
+    if (lock === false) {
+       if (Question.ans=== answer) {
       e.target.classList.add("correct");
       console.log("correct");
+      setLock(true);
     } else {
       e.target.classList.add("wrong");
       console.log("wrong");
+      setLock(true);
+    }
     }
    }
  console.log(index);
@@ -49,12 +54,12 @@ export default function Definite(){
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
           <li onClick={(e)=>{check(e,1)}}>{Question.option1}</li>
-          <li onClick={(e)=>{check(e,1)}}>{Question.option2}</li>
+          <li onClick={(e)=>{check(e,2)}}>{Question.option2}</li>
           </div>
           <br></br>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-          <li onClick={(e)=>{check(e,1)}}>{Question.option3}</li>
-          <li onClick={(e)=>{check(e,1)}}>{Question.option4}</li>
+          <li onClick={(e)=>{check(e,3)}}>{Question.option3}</li>
+          <li onClick={(e)=>{check(e,4)}}>{Question.option4}</li>
           </div>
         </ul>
        <button className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded" onClick={adding}>Next</button> 
