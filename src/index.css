@@ -79,9 +79,9 @@ li{
 li:hover{
   background-color: linear-gradient(#E65895, #BC6BE8);
 }
-.correct{
+#cont.correct{
   background-color: red;
 }
-.wrong{
+#cont.wrong{
   background-color: blue;
 }

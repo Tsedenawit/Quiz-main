@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import { Data } from "./Data";
 import Congra from "./Congra";
-import {useHref, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 export default function Definite(){
     const numbers = [{id:1, num:1},
       {id:2, num:2} ,{id:3, num:3}, {id:4, num:4},{id:5, num:5},
@@ -10,7 +10,7 @@ export default function Definite(){
     // const [answer, setAnswer]=useState([]);
     const [index, Setindex]=useState(0)
    const [Question,setQuestion]=useState(Data[index]);  
-   const navigate = useNavigate();
+  //  const navigate = useNavigate();
 
 
    let adding=()=>{
@@ -21,8 +21,10 @@ export default function Definite(){
    const check = (e,answer)=>{
     if (Question.ans=== answer) {
       e.target.classList.add("correct");
+      console.log("correct");
     } else {
       e.target.classList.add("wrong");
+      console.log("wrong");
     }
    }
  console.log(index);
