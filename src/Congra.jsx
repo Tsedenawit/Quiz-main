@@ -1,12 +1,15 @@
 import React from "react";
+import { Data } from "./Data";
+import { setQuestion } from "./store/store";
 import { useSelector, useDispatch } from "react-redux";
-
 export default function Congra() {
   const Question = useSelector((state) => state.question);
   console.log("que", Question);
+  const Index = useSelector((state)=>{state.index});
+  console.log("my" , Index)
+  const dispatch = useDispatch();
   let play = () => {
-    Setindex(0);
-    setQuestion(Data[index]);
+    dispatch(setQuestion(Data[Index])) ;
   };
   return (
     <div id="contain">
@@ -19,7 +22,7 @@ export default function Congra() {
       <h3 className="text-white text-xl text-center">
         You answer 4/10 correctly.
       </h3>
-      <button id="play">Play again</button>
+      <button id="play" onClick={play}>Play again</button>
     </div>
   );
 }
