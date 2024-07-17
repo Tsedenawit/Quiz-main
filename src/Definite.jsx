@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import { Data } from "./Data";
 import Congra from "./Congra";
 import { useNavigate } from "react-router-dom";
-import { useSelector,useDispatch } from "react-redux";
-import { incremented,decremented } from "./store/store";
+import { useSelector, useDispatch } from "react-redux";
+import { setQuestion } from "./store/store";
 export default function Definite() {
-  const myValue=useSelector(state=>state.value)
-  console.log('myvalue',myValue);
+  const Question = useSelector((state) => state.question);
+  console.log("Question", Question);
 
-  const dispatch=useDispatch()
-  const incrementValue=()=>{
-   dispatch(incremented())
-  }
-  console.log('myvalue',myValue);
+  const dispatch = useDispatch();
 
   const numbers = [
     { id: 1, num: 1 },
@@ -29,22 +25,23 @@ export default function Definite() {
 
   // const [answer, setAnswer]=useState([]);
   const [index, Setindex] = useState(0);
-  const [Question, setQuestion] = useState(Data[index]);
   const [lock, setLock] = useState(false);
   const navigate = useNavigate();
 
   let adding = () => {
     if (index < 9) {
       Setindex(index + 1);
-      setQuestion(Data[index + 1]);
+      dispatch(setQuestion(Data[index + 1]));
     } else {
       navigate("/Congra");
     }
+
     let play = () => {
       Setindex(0);
       setQuestion(Data[index]);
     };
   };
+
   const check = (e, answer) => {
     if (lock === false) {
       if (Question.ans === answer) {
@@ -63,6 +60,7 @@ export default function Definite() {
   //   return
   //  }
   console.log(index, Question);
+
   return (
     <div id="cont">
       <div className="flex ml-20 mr-20 mt-10">
