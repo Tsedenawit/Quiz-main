@@ -2,11 +2,15 @@ import React from "react";
 import { Data } from "./Data";
 import { setQuestion } from "./store/store";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function Congra() {
   const Question = useSelector((state) => state.question);
   console.log("que", Question);
-  const Index = useSelector((state)=>{state.index});
-  console.log("my" , Index)
+
+  const Index = useSelector((state)=>state.index);
+  console.log("my" , Index);
+
+  const navigation=useNavigate();
   const dispatch = useDispatch();
   let play = () => {
     dispatch(setQuestion(Data[Index])) ;
