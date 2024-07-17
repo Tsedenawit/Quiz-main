@@ -14,6 +14,7 @@ export default function Congra() {
   const dispatch = useDispatch();
   let play = () => {
     dispatch(setQuestion(Data[Index])) ;
+    navigation("/")
   };
   return (
     <div id="contain">
