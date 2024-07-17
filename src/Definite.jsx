@@ -36,10 +36,6 @@ export default function Definite() {
       navigate("/Congra");
     }
 
-    let play = () => {
-      Setindex(0);
-      setQuestion(Data[index]);
-    };
   };
 
   const check = (e, answer) => {

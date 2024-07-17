@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Congra() {
   const Question = useSelector((state) => state.question);
-console.log('que',Question);
+  console.log("que", Question);
+  let play = () => {
+    Setindex(0);
+    setQuestion(Data[index]);
+  };
   return (
     <div id="contain">
       <div id="ima"></div>
