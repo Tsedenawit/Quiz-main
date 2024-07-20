@@ -22,11 +22,11 @@ export default function Definite() {
     { id: 9, num: 9 },
     { id: 10, num: 10 },
   ];
-function convert(optionNumber,answer) {
-  const result = optionNumber.replace(/option\d+/g, '');
-  if (result == answer)
-    return true;
-}
+// function convert(optionNumber,answer) {
+//   const result = optionNumber.replace(/option\d+/g, '');
+//   if (result == answer)
+//     return true;
+// }
 
   // const [answer, setAnswer]=useState([]);
   const [index, Setindex] = useState(0);
@@ -42,7 +42,12 @@ function convert(optionNumber,answer) {
     }
 
   };
+  let Option1 = useRef(null);
+  let Option2 = useRef(null);
+  let Option3 = useRef(null);
+  let Option4 = useRef(null);
 
+  let options =[Option1,Option2,Option3,Option4];
   const check = (e, answer) => {
     if (lock === false) {
       if (Question.ans === answer) {
@@ -53,9 +58,6 @@ function convert(optionNumber,answer) {
         e.target.classList.add("wrong");
         console.log("wrong");
         setLock(true);
-        if (convert === true) {
-          e.target.classList.add("correct");
-        }
       }
     }
   };
