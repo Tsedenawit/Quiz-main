@@ -31,7 +31,9 @@ export default function Definite() {
   // const [answer, setAnswer]=useState([]);
   const [index, Setindex] = useState(0);
   const [lock, setLock] = useState(false);
+  const [score, setScore]=useState(0);
   const navigate = useNavigate();
+
 
   let adding = () => {
     if (index < 9) {
@@ -54,6 +56,7 @@ export default function Definite() {
         e.target.classList.add("correct");
         console.log("correct");
         setLock(true);
+        setScore(score +1);
       } else {
         e.target.classList.add("wrong");
         console.log("wrong");

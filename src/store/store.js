@@ -4,12 +4,16 @@ const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     index:0,
-    question:Data[0]
+    question:Data[0],
+    score:0
   },
   reducers: {
     setQuestion:(state,action)=>{
         state.question=action.payload
-    }
+    },
+    setScore:(state,action)=>{
+      state.question=action.payload
+  }
   }
 })
 
