@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Data } from "./Data";
 import Congra from "./Congra";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +22,11 @@ export default function Definite() {
     { id: 9, num: 9 },
     { id: 10, num: 10 },
   ];
+function convert(optionNumber,answer) {
+  const result = optionNumber.replace(/option\d+/g, '');
+  if (result == answer)
+    return true;
+}
 
   // const [answer, setAnswer]=useState([]);
   const [index, Setindex] = useState(0);
@@ -48,6 +53,9 @@ export default function Definite() {
         e.target.classList.add("wrong");
         console.log("wrong");
         setLock(true);
+        if (convert === true) {
+          e.target.classList.add("correct");
+        }
       }
     }
   };
