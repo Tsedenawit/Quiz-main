@@ -58,6 +58,7 @@ export default function Definite() {
         e.target.classList.add("wrong");
         console.log("wrong");
         setLock(true);
+        options[Question.ans-1].current.classList.add("correct")
       }
     }
   };
@@ -85,14 +86,14 @@ export default function Definite() {
         <br></br>
         <ul>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-            <li
+            <li ref={Option1}
               onClick={(e) => {
                 check(e, 1);
               }}
             >
               {Question.option1}
             </li>
-            <li
+            <li ref={Option2}
               onClick={(e) => {
                 check(e, 2);
               }}
@@ -102,14 +103,14 @@ export default function Definite() {
           </div>
           <br></br>
           <div className="flex grid-rows-6 grid-flow-col gap-12 justify-center">
-            <li
+            <li ref={Option3}
               onClick={(e) => {
                 check(e, 3);
               }}
             >
               {Question.option3}
             </li>
-            <li
+            <li ref={Option4}
               onClick={(e) => {
                 check(e, 4);
               }}
