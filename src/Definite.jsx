@@ -34,7 +34,9 @@ export default function Definite() {
   const navigate = useNavigate();
 
   let adding = () => {
-    if (lock === true) {
+     if (index === 9) {
+       navigate("/Congra");
+    }else if (lock === true) {
         Setindex(++index);
         dispatch(setQuestion(Data[index]));
         setLock(false);
@@ -44,9 +46,7 @@ export default function Definite() {
           return null;
         })
     } 
-    else if (index === 10) {
-       navigate("/Congra");
-    }
+   
 
   };
   let Option1 = useRef(null);
