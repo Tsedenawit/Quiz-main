@@ -11,7 +11,7 @@ export default function Congra() {
   console.log("my" , Index);
 
   const score = useSelector((state)=>state.score);
-  console.log("my" , score);
+  console.log("mine" , score);
   const navigation=useNavigate();
   const dispatch = useDispatch();
   let play = () => {
@@ -27,7 +27,7 @@ export default function Congra() {
       <br></br>
       <br></br>
       <h3 className="text-white text-xl text-center">
-        You answer 4/10 correctly.
+        You answer {score}/10 correctly.
       </h3>
       <button id="play" onClick={play}>Play again</button>
     </div>
