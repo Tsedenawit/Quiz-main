@@ -10,6 +10,8 @@ export default function Congra() {
   const Index = useSelector((state)=>state.index);
   console.log("my" , Index);
 
+  const score = useSelector((state)=>state.score);
+  console.log("my" , score);
   const navigation=useNavigate();
   const dispatch = useDispatch();
   let play = () => {
