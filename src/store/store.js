@@ -17,7 +17,7 @@ const counterSlice = createSlice({
   }
 })
 
-export const { setQuestion } = counterSlice.actions
+export const { setQuestion, setScore} = counterSlice.actions
 
 export const store = configureStore({
   reducer: counterSlice.reducer

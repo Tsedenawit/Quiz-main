@@ -3,7 +3,7 @@ import { Data } from "./Data";
 import Congra from "./Congra";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setQuestion } from "./store/store";
+import { setQuestion, setScore } from "./store/store";
 export default function Definite() {
   const Question = useSelector((state) => state.question);
   console.log("Question", Question);
@@ -31,7 +31,6 @@ export default function Definite() {
   // const [answer, setAnswer]=useState([]);
   const [index, Setindex] = useState(0);
   const [lock, setLock] = useState(false);
-  const [score, setScore]=useState(0);
   const navigate = useNavigate();
 
 
@@ -56,7 +55,7 @@ export default function Definite() {
         e.target.classList.add("correct");
         console.log("correct");
         setLock(true);
-        setScore(score +1);
+        dispatch(setScore(prev=> prev+1))
       } else {
         e.target.classList.add("wrong");
         console.log("wrong");
