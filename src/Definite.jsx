@@ -130,7 +130,7 @@ export default function Definite() {
         </ul>
         <button
           className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded"
-          onClick={adding}
+          onClick={()=>{adding(); next()}}
         >
           Next
         </button>
