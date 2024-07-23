@@ -42,12 +42,13 @@ export default function Definite() {
   }
 
   let adding = () => {
-    if (index < 9) {
-      if (lock === true) {
+    if (index < 9 && lock === true) {
         Setindex(++index);
         dispatch(setQuestion(Data[index + 1]));
         setLock(false);
-      }
+        options.map((opt)=>{
+          opt.current.classList.remo
+        })
     } else {
       navigate("/Congra");
     }
