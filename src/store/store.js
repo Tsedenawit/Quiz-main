@@ -12,7 +12,7 @@ const counterSlice = createSlice({
         state.question=action.payload
     },
     setScore:(state,action)=>{
-      state.question=action.payload
+      state.score=action.payload
   }
   }
 })

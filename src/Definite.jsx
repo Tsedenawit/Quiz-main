@@ -33,6 +33,13 @@ export default function Definite() {
   const [lock, setLock] = useState(false);
   const navigate = useNavigate();
 
+  let next =()=>{
+    if (lock === true) {
+      Setindex(++index);
+      dispatch(setQuestion(Data[index + 1]));
+      setLock(false);
+    }
+  }
 
   let adding = () => {
     if (index < 9) {
