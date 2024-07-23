@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setQuestion, setScore } from "./store/store";
 export default function Definite() {
-  const Question = useSelector((state) => state.question);
+  let Question = useSelector((state) => state.question);
   console.log("Question", Question);
 
   const dispatch = useDispatch();
@@ -29,28 +29,23 @@ export default function Definite() {
 // }
 
   // const [answer, setAnswer]=useState([]);
-  const [index, Setindex] = useState(0);
-  const [lock, setLock] = useState(false);
+  let [index, Setindex] = useState(0);
+  let [lock, setLock] = useState(false);
   const navigate = useNavigate();
 
-  let next =()=>{
-    if (lock === true) {
-      Setindex(++index);
-      dispatch(setQuestion(Data[index + 1]));
-      setLock(false);
-    }
-  }
-
   let adding = () => {
-    if (index < 9 && lock === true) {
+    if (lock === true) {
         Setindex(++index);
-        dispatch(setQuestion(Data[index + 1]));
+        dispatch(setQuestion(Data[index]));
         setLock(false);
         options.map((opt)=>{
-          opt.current.classList.remo
+          opt.current.classList.remove("wrong");
+          opt.current.classList.remove("correct");
+          return null;
         })
-    } else {
-      navigate("/Congra");
+    } 
+    else if (index === 10) {
+       navigate("/Congra");
     }
 
   };
