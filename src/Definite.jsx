@@ -43,8 +43,11 @@ export default function Definite() {
 
   let adding = () => {
     if (index < 9) {
-      Setindex(index + 1);
-      dispatch(setQuestion(Data[index + 1]));
+      if (lock === true) {
+        Setindex(++index);
+        dispatch(setQuestion(Data[index + 1]));
+        setLock(false);
+      }
     } else {
       navigate("/Congra");
     }
@@ -130,7 +133,7 @@ export default function Definite() {
         </ul>
         <button
           className="shadow-md w-[100px] h-[50px] bg-slate-600 pl-50 rounded"
-          onClick={()=>{adding(); next()}}
+          onClick={adding}
         >
           Next
         </button>
