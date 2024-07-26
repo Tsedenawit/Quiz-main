@@ -29,7 +29,8 @@ export default function Congra() {
       <h3 className="text-white text-xl text-center">
         You answer {score}/10 correctly.
       </h3>
-      <button id="play" onClick={play}>Play again</button>
+         <button id="play" onClick={play}>Play again</button>
+     
     </div>
   );
 }
