@@ -29,8 +29,9 @@ export default function Congra() {
       <h3 className="text-white text-xl text-center">
         You answer {score}/10 correctly.
       </h3>
-         <button id="play" onClick={play}>Play again</button>
-     
+      <div className="flex justify-center mt-10">
+        <button id="play" onClick={play}>Play again</button>
+      </div>
     </div>
   );
 }

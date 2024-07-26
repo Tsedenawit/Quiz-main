@@ -35,13 +35,17 @@ body {
   background-repeat: no-repeat;
 }
 #play{
-  background-color: linear-gradient(#E65895, #BC6BE8);
-  width: 100px;
-  height: 70px;
+  background: linear-gradient(#E65895, #BC6BE8); /* Fixed the background property */
+  width: 200px;
+  height: 60px;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   text-align: center;
-  justify-content: center;
-  line-height: 200px; 
-  box-shadow: 1px 1px 1px 0px black ;
+  border: none; /* Optional: Remove default button border */
+  color: white; /* Optional: Set text color */
+  font-size: 16px; /* Optional: Set font size */
+  cursor: pointer; /* Optional: Change cursor on hover */
 }
 .num{
   background-color:#8B8EAB ;
