@@ -89,7 +89,7 @@ export default function Definite() {
       <br></br>
       <div>
         <h3 className="text-white text-center text-xl">
-          {index + 1}.{Question.que}
+         {Question.que}
         </h3>
         <br></br>
         <ul>

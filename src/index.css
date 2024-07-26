@@ -19,7 +19,7 @@ body {
 #contain{
   background-color:#393F6E ;
   width: 500px;
-  height: 450px;
+  height: 500px;
   border-radius: 20px;
   position: absolute;
   top: 50%;
@@ -35,17 +35,18 @@ body {
   background-repeat: no-repeat;
 }
 #play{
-  background: linear-gradient(#E65895, #BC6BE8); /* Fixed the background property */
-  width: 200px;
+  background: linear-gradient(#E65895, #BC6BE8); 
+  width: 250px;
   height: 60px;
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
-  border: none; /* Optional: Remove default button border */
-  color: white; /* Optional: Set text color */
-  font-size: 16px; /* Optional: Set font size */
-  cursor: pointer; /* Optional: Change cursor on hover */
+  border: none; 
+  color: white; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 10px;
 }
 .num{
   background-color:#8B8EAB ;
